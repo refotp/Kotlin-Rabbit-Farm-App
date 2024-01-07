@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view_kawin_hpl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_view_kelinci"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="16dp"
+            tools:src="@drawable/kelinci_1"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/Circular"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/text_view_nama_kelinci"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Nama Kelinci"
+                style="@style/TextRegular"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/text_view_tanggal_periksa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="30 Oktober 2023"
+                style="@style/TextMedium"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/text_view_keterangan"
+                android:textColor="@color/green"
+                style="@style/TextRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Pemberian vaksin sinnovac sebanyak 2 dosis atau 200ml"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

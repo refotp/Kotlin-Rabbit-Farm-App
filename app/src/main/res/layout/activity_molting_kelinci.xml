@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".activity.MoltingKelinciActivity">
+    <LinearLayout
+        android:id="@+id/layout_top_background"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:padding="24dp"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:background="@drawable/custom_layout_background_gradient">
+        <TextView
+            style="@style/TextMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data Molting Kelinci"
+            android:textSize="32sp"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/pure_white"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image_background_molting_kelinci"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/text_view_kelinci"
+        app:layout_constraintTop_toBottomOf="@id/layout_top_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kelinci"
+        style="@style/TextMedium"
+        android:textSize="24sp"
+        android:paddingHorizontal="32dp"
+        android:layout_marginTop="16dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:padding="8dp"
+        android:overScrollMode="never"
+        android:id="@+id/recycler_view_molting"
+        tools:listitem="@layout/card_item_kawin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_kelinci"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

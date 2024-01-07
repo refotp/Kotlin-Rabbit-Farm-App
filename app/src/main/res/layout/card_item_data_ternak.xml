@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/card_view_kelinci"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    android:padding="16dp"
+
+    android:layout_margin="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image_view_kelinci"
+                android:padding="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/kelinci_1"
+                app:shapeAppearanceOverlay="@style/Circular"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                        <TextView
+                            android:paddingHorizontal="12dp"
+                            android:layout_marginTop="12dp"
+                            android:id="@+id/text_view_nama_kelinci"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="Nama Kelinci"
+                            android:textSize="16sp"
+                            style="@style/TextMedium"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        tools:ignore="NestedWeights">
+                        <TextView
+                            android:id="@+id/text_view_jenis_kelinci"
+                            android:paddingHorizontal="12dp"
+                            android:gravity="top"
+                            android:textColor="#771A1A1A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="Jenis Kelinci"
+                            android:textSize="14sp"
+                            style="@style/TextRegular"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:textSize="4sp"
+                                android:id="@+id/text_view_kelinci_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="aowkoakwe"
+                                android:visibility="invisible"
+                                android:layout_gravity="bottom"
+                                />
+                            <TextView
+                                android:textSize="4sp"
+                                android:id="@+id/text_view_parent_node"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="hahahaha"
+                                android:visibility="invisible"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+            </LinearLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_weight="0.5"
+                    android:layout_marginEnd="12dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        app:layout_constraintEnd_toStartOf="@id/image_view_status_kelinci"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:id="@+id/image_view_jenis_kelamin"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        tools:src ="@drawable/icon_male2"/>
+                <ImageView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/image_view_jenis_kelamin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/text_view_status_kelinci"
+                    android:translationZ="2dp"
+                    android:id="@+id/image_view_status_kelinci"
+                    android:layout_width="44dp"
+                    app:tint="@color/green"
+                    android:layout_height="44dp"
+                    tools:src="@drawable/icon_hidup"/>
+
+                    <TextView
+                        app:layout_constraintTop_toBottomOf="@id/image_view_status_kelinci"
+                        app:layout_constraintStart_toEndOf="@id/image_view_jenis_kelamin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:id="@+id/text_view_status_kelinci"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Teradopt"
+                        style="@style/TextRegular"
+                        tools:textColor="@color/green"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>

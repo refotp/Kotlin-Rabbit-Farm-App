@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/layout_top_dashboard"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/card_view_finance"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:elevation="8dp"
+            android:padding="20dp"
+            android:background="@drawable/custom_layout_background_gradient">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:alignItems="baseline"
+                >
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello \nWelcome Back"
+                    android:textColor="@color/pure_white"
+                    style="@style/TextMedium"
+                    android:textSize="32sp"
+                    android:layout_marginTop="24dp"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_logout"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:icon="@drawable/icon_logout"
+                    android:backgroundTint="@android:color/transparent"
+                    android:text="Logout"
+                    style="@style/TextRegular"
+                    app:strokeColor="@color/pure_white"
+                    app:strokeWidth="2dp"
+                    android:textColor="@color/pure_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/image_background_dashboard"/>
+        </LinearLayout>
+<!--        <TextView-->
+<!--            android:paddingHorizontal="20dp"-->
+<!--            android:paddingVertical="24dp"-->
+<!--            android:id="@+id/text_view_greetings"-->
+<!--            android:background="@color/red"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/poppins_semibold"-->
+<!--            android:text="Hello\nWelcome Back"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="28sp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintBottom_toTopOf="@id/card_view_finance"/>-->
+
+        <LinearLayout
+            android:layout_margin="16dp"
+            android:id="@+id/card_view_finance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layout_top_dashboard">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_view_income"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardElevation="8dp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        style="@style/TextMedium"
+                        android:id="@+id/text_view_my_farm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Farm"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toTopOf="@id/text_view_date"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_view_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Sabtu 12 Agustus 2023"
+                        android:textColor="@color/black"
+                        style="@style/TextRegular"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@id/view_line_space"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/text_view_my_farm" />
+
+                    <View
+                        android:id="@+id/view_line_space"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/grey"
+                        app:layout_constraintTop_toBottomOf="@id/text_view_date" />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:alignItems="center"
+                        app:justifyContent="space_evenly"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view_line_space">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/card_view_total_ternak"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardUseCompatPadding="true"
+                            app:cardElevation="8dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Total Ternak"
+                                    style="@style/TextMedium"
+                                    android:gravity="center"/>
+                            <ImageView
+                                android:layout_gravity="center_horizontal"
+                                android:id="@+id/image_view_rabbit"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="12dp"
+
+                                android:src="@drawable/rabbit_icon"
+                                app:tint="@color/red" />
+
+                            <TextView
+                                android:id="@+id/text_view_jumlah_kelinci"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextMedium"
+                                android:text="0 Ekor"
+                                android:layout_marginStart="4dp"
+                                android:textColor="@color/black" />
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="8dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+                            <TextView
+                                android:id="@+id/text_view_status_untung_rugi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Untung/Rugi"
+                                style="@style/TextMedium"
+                                android:gravity="center"/>
+                            <ImageView
+                                android:id="@+id/image_view_untung_rugi"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="12dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+
+                                tools:src="@drawable/icon_money"/>
+                            <TextView
+                                android:id="@+id/text_view_untung_rugi"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                style="@style/TextMedium"/>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    </com.google.android.flexbox.FlexboxLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_margin="20dp"
+            android:id="@+id/text_view_farm_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:text="Catatan Perawatan"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_view_finance" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="16dp"
+            android:layout_marginTop="12dp"
+            android:id="@+id/recycler_view_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:listitem="@layout/card_item_dashboard_pemeliharaan_ternak"
+            app:layout_constraintTop_toBottomOf="@id/text_view_farm_info"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="40dp"
+            />
+
+        
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

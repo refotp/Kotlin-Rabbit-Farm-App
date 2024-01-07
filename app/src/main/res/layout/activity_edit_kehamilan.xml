@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:context=".activity.EditKehamilanActivity">
+        <ImageView
+            android:id="@+id/image_view_back_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="12dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/icon_back"/>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginHorizontal="20dp"
+            app:cardUseCompatPadding="true"
+            android:layout_marginVertical="32dp"
+            android:id="@+id/card_view_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:elevation="12dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="28dp"
+            app:cardBackgroundColor="@color/pure_white"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="16dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    app:layout_constraintBottom_toTopOf="@id/layout_form"
+                    android:elevation="5dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="36dp"
+                    android:id="@+id/text_view_title"
+                    style="@style/TextSemiBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Edit Kehamilan"
+                    android:textSize="24sp"
+                    android:textColor="@color/black" />
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_title"
+                    android:id="@+id/layout_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <CheckBox
+                        android:id="@+id/checkbox_kawin_kelinci_sendiri"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kawin dengan kelinci sendiri"
+                        style="@style/TextRegular"/>
+                    <TextView
+                        android:id="@+id/text_view_kelinci_jantan"
+                        android:visibility="gone"
+                        android:layout_marginTop="12dp"
+                        style="@style/TextRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kelinci Jantan"
+                        android:textSize="16sp" />
+                    <Spinner
+                        android:visibility="gone"
+                        android:id="@+id/spinner_nama_kelinci_jantan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tanggal Kawin"
+                        style="@style/TextRegular"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:id="@+id/edit_text_tanggal_kawin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Jumlah"
+                        android:textColorHint="@color/grey"
+                        app:startIconDrawable="@drawable/image_date"
+                        app:startIconTint="@color/red">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:clickable="false"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            >
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <Button
+                        android:id="@+id/button_tanggal_picker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/red"
+                        android:text="Tanggal"/>
+
+                    <TextView
+                        android:layout_marginTop="12dp"
+                        style="@style/TextRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Keterangan"
+                        />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:id="@+id/edit_text_keterangan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Keterangan"
+                        android:textColorHint="@color/grey"
+                        app:startIconDrawable="@drawable/icon_keterangan"
+                        app:startIconTint="@color/red">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            >
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <ImageView
+                        android:layout_marginTop="24dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/image_view_bottom_background_form_kawinkan"/>
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.button.MaterialButton
+            android:clickable="true"
+            android:id="@+id/button_sumbit_form"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="Selesai"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintTop_toBottomOf="@id/card_view_form"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/pure_white"
+            app:backgroundTint="@color/red"
+            app:rippleColor="#F2A9A2"
+            android:focusable="true"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

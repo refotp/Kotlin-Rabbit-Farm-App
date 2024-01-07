@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "262185175761",
+    "project_id": "cottontails-ee28b",
+    "storage_bucket": "cottontails-ee28b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262185175761:android:e5849a52345a4f7bd193f0",
+        "android_client_info": {
+          "package_name": "com.refo.cottontails"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "262185175761-27h2llvcidpg9lmvden17t11u8uol4b5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAy2t_-L5Vy-mK3T5-me8N_WQF5zbU2ueo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "262185175761-27h2llvcidpg9lmvden17t11u8uol4b5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
